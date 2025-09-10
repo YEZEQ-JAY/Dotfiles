@@ -1,0 +1,3 @@
+These are my Frankenstein dotfiles.
+Some stolen, some made but mostly combined to achieve what I like.
+:) 
