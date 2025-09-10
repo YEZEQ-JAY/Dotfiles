@@ -1,0 +1,144 @@
+* {
+  /* General taskbar font, I like maple mono ^-^*/
+  font-family: UttumDtomu;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 0px;
+  background: transparent;
+}
+
+window#waybar {
+  /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
+  background-image: linear-gradient(to bottom, #141216 100%);
+  border-radius:8px;
+  padding: 0px;
+  border-style: none;
+}
+
+#battery,
+#clock,
+#custom-applauncher,
+#tray,
+#workspaces,
+#network,
+
+#pulseaudio {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  color: #d8cab8;
+
+  border-style: none;
+  transition-duration: 120ms;
+}
+
+#clock {
+  margin-right: 6px;
+}
+
+#clock:hover {
+  background-image: linear-gradient(to bottom, #5e81ac 100%);
+  color: #d8cab8;
+  transition-duration: 120ms;
+}
+
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #5e81ac 100%);
+  color: #d8cab8;
+  transition-duration: 120ms;
+}
+
+#custom-applauncher {
+  font-size: 18px;
+  transition-duration: 120ms;
+}
+#custom-applauncher:hover {
+  background-image: linear-gradient(to bottom, #5e81ac 100%);
+  color: #d8cab8;
+  transition-duration: 120ms;
+}
+
+#tray menu {
+  background-color: #141216;
+  color: #d8cab8;
+  padding: 4px;
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+
+  margin: 3px;
+  color: #d8cab8;
+  border-radius: 4px;
+  border-style: solid;
+  border-color: #27232b;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #27232b 100%);
+  color: #d8cab8;
+  font-weight: bold;
+}
+
+#workspaces button {
+  transition-duration: 100ms;
+  all: initial;
+  min-width: 0;
+  font-weight: bold;
+  color: #d8cab8;
+  margin-right: 0.2cm;
+  margin-left: 0.2cm;
+}
+
+#workspaces button:hover {
+  transition-duration: 120ms;
+  color: #5e81ac;
+}
+#workspaces button.inactive {
+  color: #d8cab8;
+  font-weight: bold;
+}
+#workspaces button.focused {
+  color: #5e81ac;
+  font-weight: bold;
+}
+#workspaces button.active {
+  color: #5e81ac;
+  font-weight: bold;
+}
+#workspaces button.urgent {
+  color: #fcb167;
+}
+
+#battery {
+  background-color: #222222;
+  color: #d8cab8;
+}
+#battery.warning {
+  background-color: #222222;
+  color: #d08770;
+}
+#battery.critical {
+  background-color: #222222;
+  color: #bf616a;
+}
+#baterry.plugged {
+  background-color: #222222;
+  color: #5e81ac;
+}
+#battery.charging {
+  background-color: #222222;
+  color: #5e81ac;
+}
+#battery.full {
+  background-color: #222222;
+  color: #5e81ac;
+}
+#battery.urgent {
+}
+#keyboard-state {
+  background-color: #222222;
+  color: #d8cab8;
+  padding-left: 20px;
+}
