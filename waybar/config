@@ -1,18 +1,21 @@
 {
-  "layer": "bot",
-  "spacing": 0,
-  "height": 30,
+  "layer": "top",
+  "spacing": 1,
+  "height": 44,
   "margin-bottom": 0,
   "margin-top": 8,
   "position": "top",
-  "width": 1520,
-  "margin-left": 600,
-  "margin-right": 600,
+  "width": 1904,
+  "margin-left": 952,
+  "margin-right": 952,
+  "expand-center": true,
   "modules-left": [
     "hyprland/workspaces",
+    "memory",
+    "cpu"
   ],
   "modules-center": [
-    "custom/applauncher",
+    "hyprland/window",
   ],
   "modules-right": [
     "network",
@@ -26,10 +29,10 @@
     "all-outputs": false,
     "tooltip": false
   },
-  "custom/applauncher": {
-    "format": "󰍜",
-    "on-click": "pgrep wofi >/dev/null 2>&1 && kilall wofi || wofi --show drun --location=top -y 15",
-    "tooltip": false
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "tooltip": false,
+    "swap-icon-label": false
   },
   "tray": {
     "spacing": 10,
@@ -37,28 +40,33 @@
   },
   "clock": {
     "tooltip-format": "{calendar}",
-    "format-alt": "  {:%a, %d %b %Y}",
-    "format": "  {:%I:%M %p}"
+    "format-alt": "   {:%a, %d %b %Y}",
+    "format": "   {:%I:%M %p}"
   },
   "network": {
-    "format-wifi": " {bandwidthDownBits}",
-    "format-ethernet": " {bandwidthDownBits}",
-    "format-disconnected": "󰤮 No Network",
+    "format-wifi": "   {bandwidthDownBits}",
+    "format-ethernet": "   {bandwidthDownBits}",
+    "format-disconnected": "󰤮   No Network",
     "interval": 5,
     "tooltip": false,
     "on-click": "nm-connection-editor",
     "interval": 5,
-    "nospacing": 1
+    "nospacing": 0
   },
-  "hyprland/language": {
-    "format": " {layout}",
-    "format-en": "EN",
-    "format-cz(CZ)": "CZ"
+  "memory": {
+    "format": "   {used:0.1f}GB",
+    "interval": 10,
+    "tooltip": false,
+  },
+  "cpu": {
+    "format": "   {usage}%",
+    "interval": 10,
+    "tooltip": false,
   },
   "pulseaudio": {
     "scroll-step": 5,
     "max-volume": 100,
-    "format": "{icon} {volume}",
+    "format": "{icon}  {volume}",
     "format-icons": [
       "",
       "",
