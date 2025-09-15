@@ -1,7 +1,7 @@
 * {
   /* General taskbar font, I like maple mono ^-^*/
   font-family: Maple Mono;
-  border-radius: 8;
+  border-radius: 8px;
   font-size: 16px;
   padding: 0px;
   background: transparent;
@@ -9,20 +9,20 @@
 
 window#waybar {
   /* Linear gradients are used because it makes less harsh rounded border radius, gtk bug :p */
-  background: #141216;
+  background-color: #141216;
   border-radius:14px;
   padding: 4px;
   border-style: none;
 }
 
 #window#waybar.empty {
-  background-image: linear-gradient(to bottom, #27232b 100%);
-
-  margin: 6px;
-  margin-right: 0px;
-  padding: 4px 8px;
-  border-radius: 8px;
-  color: #d8cab8;
+  background-color: #141216;
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  min-height: 0;
+  border: none;
 }
 
 #memory,
@@ -35,7 +35,7 @@ window#waybar {
 #network,
 
 #pulseaudio {
-  background-image: linear-gradient(to bottom, #27232b 100%);
+  background-color: #27232b;
 
   margin: 6px;
   margin-right: 0px;
@@ -52,13 +52,13 @@ window#waybar {
 }
 
 #clock:hover {
-  background-image: linear-gradient(to bottom, #5e81ac 100%);
+  background-color: #5e81ac;
   color: #d8cab8;
   transition-duration: 120ms;
 }
 
 #pulseaudio:hover {
-  background-image: linear-gradient(to bottom, #5e81ac 100%);
+  background-color: #5e81ac;
   color: #d8cab8;
   transition-duration: 120ms;
 }
@@ -69,7 +69,7 @@ window#waybar {
   padding: 4px;
 }
 #tray menu menuitem {
-  background-image: linear-gradient(to bottom, #27232b 100%);
+  background-color: #27232b;
 
   margin: 6px;
   color: #d8cab8;
@@ -78,7 +78,7 @@ window#waybar {
   border-color: #27232b;
 }
 #tray menu menuitem:hover {
-  background-image: linear-gradient(to bottom, #27232b 100%);
+  background-color: #27232b;
   color: #d8cab8;
   font-weight: bold;
 }
