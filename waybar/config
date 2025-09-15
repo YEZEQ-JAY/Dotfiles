@@ -74,7 +74,7 @@
     ],
     "nospacing": 1,
     "format-muted": " ",
-    "on-click": "pavucontrol:",
+    "on-click": "",
     "tooltip": false,
   },
   "battery": {
